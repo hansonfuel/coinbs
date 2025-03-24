@@ -4,36 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in to Coinbase</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
     <style>
         body {
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
 
-        .signin-box {
+        .signin-container {
+            width: 400px;
             background-color: white;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            width: 100px;
-            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 1rem;
+        .logo img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .signin-header {
+            color: #2f3336;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         .input-group {
@@ -43,15 +52,17 @@
         label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #333;
+            color: #2f3336;
+            font-weight: 500;
         }
 
         input {
             width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
             margin-bottom: 1rem;
+            font-size: 1rem;
         }
 
         .continue-btn {
@@ -60,40 +71,58 @@
             background-color: #4297e1;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
         }
 
         .continue-btn:hover {
-            background-color: #3183CE;
+            background-color: #3183ce;
+        }
+
+        .or-divider {
+            margin: 1.5rem 0;
+            text-align: center;
+            color: #a9b2c0;
         }
 
         .alternative-signins {
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .signin-btn {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            color: #333;
+            align-items: center;
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            color: #2f3336;
+            font-size: 1rem;
             cursor: pointer;
         }
 
         .signin-btn:hover {
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
+        }
+
+        .signin-btn img {
+            width: 20px;
+            height: 20px;
+            margin-left: 0.5rem;
         }
 
         .policy-info {
-            font-size: 0.8rem;
+            font-size: 0.875rem;
             color: #666;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
         }
 
         .policy-link {
@@ -103,40 +132,40 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="signin-box">
-            <img src="coinbase-logo.png" alt="Coinbase Logo" class="logo">
-            <h1>Sign in to Coinbase</h1>
-
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Your email address">
-            </div>
-
-            <button class="continue-btn">Continue</button>
-
-            <p>OR</p>
-
-            <div class="alternative-signins">
-                <button class="signin-btn">
-                    <span>Sign in with Google</span>
-                    <img src="google-icon.png" alt="Google Logo">
-                </button>
-                <button class="signin-btn">
-                    <span>Sign in with Apple</span>
-                    <img src="apple-icon.png" alt="Apple Logo">
-                </button>
-                <button class="signin-btn">
-                    <span>Sign in with Wallet</span>
-                    <img src="wallet-icon.png" alt="Wallet Icon">
-                </button>
-            </div>
-
-            <p class="policy-info">
-                Not your device? Use a private window. See our 
-                <a href="#" class="policy-link">Privacy Policy</a> for more info.
-            </p>
+    <div class="signin-container">
+        <div class="logo">
+            <img src="coinbase-logo.png" alt="Coinbase Logo">
         </div>
+        <h1 class="signin-header">Sign in to Coinbase</h1>
+
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your email address">
+        </div>
+
+        <button class="continue-btn">Continue</button>
+
+        <div class="or-divider">OR</div>
+
+        <div class="alternative-signins">
+            <button class="signin-btn">
+                <span>Sign in with Google</span>
+                <img src="google-icon.png" alt="Google Logo">
+            </button>
+            <button class="signin-btn">
+                <span>Sign in with Apple</span>
+                <img src="apple-icon.png" alt="Apple Logo">
+            </button>
+            <button class="signin-btn">
+                <span>Sign in with Wallet</span>
+                <img src="wallet-icon.png" alt="Wallet Icon">
+            </button>
+        </div>
+
+        <p class="policy-info">
+            Not your device? Use a private window. See our 
+            <a href="#" class="policy-link">Privacy Policy</a> for more info.
+        </p>
     </div>
 </body>
 </html>
