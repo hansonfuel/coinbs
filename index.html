@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to Coinbase</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signin-box {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            margin: 1rem 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #4297e1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+
+        .continue-btn:hover {
+            background-color: #3183CE;
+        }
+
+        .alternative-signins {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .signin-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .signin-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .policy-info {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        .policy-link {
+            color: #4297e1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signin-box">
+            <img src="coinbase-logo.png" alt="Coinbase Logo" class="logo">
+            <h1>Sign in to Coinbase</h1>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your email address">
+            </div>
+
+            <button class="continue-btn">Continue</button>
+
+            <p>OR</p>
+
+            <div class="alternative-signins">
+                <button class="signin-btn">
+                    <span>Sign in with Google</span>
+                    <img src="google-icon.png" alt="Google Logo">
+                </button>
+                <button class="signin-btn">
+                    <span>Sign in with Apple</span>
+                    <img src="apple-icon.png" alt="Apple Logo">
+                </button>
+                <button class="signin-btn">
+                    <span>Sign in with Wallet</span>
+                    <img src="wallet-icon.png" alt="Wallet Icon">
+                </button>
+            </div>
+
+            <p class="policy-info">
+                Not your device? Use a private window. See our 
+                <a href="#" class="policy-link">Privacy Policy</a> for more info.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
